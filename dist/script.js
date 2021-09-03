@@ -1,12 +1,12 @@
 import './style.css';
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js';
+import * as THREE from 'three';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui';
 
 // Loading
 const textureLoader = new THREE.TextureLoader();
 
-const normalTexture = textureLoader.load('./earth.jpg');
+const normalTexture = textureLoader.load('/textures/earth.jpg');
 
 // Debug
 const gui = new dat.GUI();
@@ -53,8 +53,8 @@ light1.add(pointLight2.position, 'y').min(-30).max(30).step(0.01);
 light1.add(pointLight2.position, 'z').min(-30).max(30).step(0.01);
 light1.add(pointLight2, 'intensity').min(0).max(30).step(0.01);
 
-const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1);
-scene.add(pointLightHelper);
+// const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1);
+// scene.add(pointLightHelper);
 
 const pointLight3 = new THREE.PointLight(0x0031f5, 2);
 pointLight3.position.set(5.64, -0.2, 1.1);
@@ -76,8 +76,8 @@ light2.addColor(light2Color, 'color').onChange(() => {
   pointLight3.color.set(light2Color.color);
 });
 
-const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 1);
-scene.add(pointLightHelper2);
+// const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 1);
+// scene.add(pointLightHelper2);
 
 /**
  * Sizes
