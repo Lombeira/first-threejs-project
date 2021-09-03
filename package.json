@@ -1,5 +1,5 @@
 {
-  "repository": "#",
+  "repository": "https://lombeira.github.io/first-threejs-project/",
   "license": "UNLICENSED",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
